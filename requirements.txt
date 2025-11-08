@@ -1,0 +1,24 @@
+# --- Core ---
+python-dotenv>=1.0.1
+streamlit>=1.28
+
+# --- PDF (não instale o pacote "fitz" do PyPI) ---
+PyMuPDF>=1.24
+
+# --- LangChain (mantém os imports do 0.1.x) ---
+langchain>=0.1,<0.2
+langchain-community>=0.0.30,<0.2
+langchain-openai>=0.0.8,<0.2
+
+# --- OpenAI client ---
+openai>=1.30
+
+# --- Vetores (FAISS) ---
+faiss-cpu>=1.8.0; platform_system != "Windows"
+# Se estiver no Windows e o FAISS falhar no pip, comente a linha acima e instale via conda:
+# conda install -c pytorch faiss-cpu
+# (ou tente um wheel pré-compilado compatível com sua versão do Python)
+
+# --- Opcional, mas útil com modelos OpenAI ---
+tiktoken>=0.7
+
